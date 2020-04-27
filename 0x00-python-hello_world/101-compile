@@ -1,0 +1,4 @@
+#!/usr/bin/python3
+import py_compile
+py_compile.compile("main.py", cfile = "main.pyc")
+
