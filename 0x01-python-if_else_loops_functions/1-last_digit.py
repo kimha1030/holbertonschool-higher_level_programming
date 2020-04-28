@@ -8,8 +8,8 @@ s3 = "and is greater than 5"
 s4 = "and is less than 6 and not 0"
 s5 = "and is 0"
 if (last > 5):
-    print("{} {} {} {} {}".format(s1,number,s2,last,s3))
+    print("{} {} {} {} {}".format(s1, number, s2, last, s3))
 elif ((last < 6) and (not(last == 0))):
-    print("{} {} {} {} {}".format(s1,number,s2,last,s4))
+    print("{} {} {} {} {}".format(s1, number, s2, last, s4))
 else:
-    print("{} {} {} {} {}".format(s1,number,s2,last,s5))
+    print("{} {} {} {} {}".format(s1, number, s2, last, s5))
