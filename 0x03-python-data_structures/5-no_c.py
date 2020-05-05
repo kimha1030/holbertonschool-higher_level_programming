@@ -7,4 +7,4 @@ def no_c(my_string):
             if ch != 'c' and ch != 'C':
                 new.append(ch)
         my_string = ''.join(new)
-        return (my_string)
+    return (my_string)
