@@ -6,11 +6,11 @@ class Square:
     """Class square that define un square and modify property"""
     def __init__(self, size=0, position=(0, 0)):
         """constructor"""
-        self.__size = size
+        self.size = size
         self.__position = position
 
     def area(self):
-        """return area of square"""
+        """method return area of square"""
         return self.__size * self.__size
 
     def my_print(self):
@@ -30,17 +30,17 @@ class Square:
 
     @property
     def size(self):
-        """return self.size"""
+        """method return self.size"""
         return self.__size
 
     @property
     def position(self):
-        """return self position"""
+        """method return self position"""
         return self.__position
 
     @size.setter
     def size(self, value):
-        """ setter size"""
+        """setter size"""
         if type(value) is not int:
             raise TypeError("size must be an integer")
         if value < 0:
