@@ -6,26 +6,18 @@ class Square:
     """Class square that define un square and modify property"""
     def __init__(self, size=0, position=(0, 0)):
         """constructor"""
-        if type(size) is not int:
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
-        if type(size) is not int:
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
-        else:
-            self.__size = size
-            self.__position = position
+        self.__size = size
+        self.__position = position
 
     def area(self):
         """return area of square"""
         return self.__size * self.__size
 
     def my_print(self):
-        """Print of square""" 
+        """method print"""
         if self.__size == 0:
             print(end="\n")
+            return
         else:
             for x in range(self.__position[1]):
                 print(sep="")
@@ -49,6 +41,14 @@ class Square:
     @size.setter
     def size(self, value):
         """ setter size"""
+        if type(value) is not int:
+            raise TypeError("size must be an integer")
+        if value < 0:
+            raise ValueError("size must be >= 0")
+        if type(value) is not int:
+            raise TypeError("size must be an integer")
+        if value < 0:
+            raise ValueError("size must be >= 0")
         if type(value) is not int:
             raise TypeError("size must be an integer")
         if value < 0:
