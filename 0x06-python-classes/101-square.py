@@ -50,14 +50,14 @@ class Square:
     def __str__(self):
         """method print with __str__"""
         if self.__size == 0:
-            return
+            return ""
         for x in range(self.__position[1]):
             print("")
         for y in range(self.__size):
             if y == (self.__size - 1):
-                print(" "*self.__position[0], end="")
-                print("#"*self.__size, end="")
+                print(" " * self.__position[0], end="")
+                print("#" * self.__size, end="")
             else:
-                print(" "*self.__position[0], end="")
-                print("#"*self.__size)
+                print(" " * self.__position[0], end="")
+                print("#" * self.__size)
         return ""
