@@ -50,7 +50,7 @@ class Square:
     def my_print(self):
         """method print"""
         if self.__size == 0:
-            print("\n")
+            print("")
             return
         else:
             for p in range(self.__position[1]):
