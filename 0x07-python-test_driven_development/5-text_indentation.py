@@ -9,11 +9,10 @@ def text_indentation(text):
     if type(text) != str:
         raise TypeError("text must be a string")
     text = text
-    for i in text:
-        if i == "?":
-            text = text.replace("? ", "?\n\n")
-        if i == ":":
-            text = text.replace(": ", ":\n\n")
-        if i == ".":   
-            text = text.replace(". ", ".\n\n")
+    text = text.replace("? ", "?\n")
+    text = text.replace("?", "?\n")
+    text = text.replace(": ", ":\n")
+    text = text.replace(":", ":\n")
+    text = text.replace(". ", ".\n")
+    text = text.replace(".", ".\n")
     print(text, end="")
