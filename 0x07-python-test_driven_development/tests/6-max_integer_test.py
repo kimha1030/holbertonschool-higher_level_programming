@@ -20,6 +20,7 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_none_list(self):
         self.assertEqual(max_integer([None]), None)
+        self.assertEqual(max_integer([]), None)
 
     def test_pos_float(self):
         self.assertEqual(max_integer([1.2, 2.4, 5.6]), 5.6)
