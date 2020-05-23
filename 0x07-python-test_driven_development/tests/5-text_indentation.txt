@@ -1,0 +1,49 @@
+==================================
+ How to use 5-text_indentation.py
+==================================
+
+Import module:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Function:
+Funtion that allows indent a text
+
+test 0: string as text
+    >>> text_indentation("""Hello_Holberton""")
+    Hello_Holberton
+
+test 1: text with all characters:
+    >>> text_indentation("""Function: allows? indent. """)
+    Function:
+    <BLANKLINE>
+    allows?
+    <BLANKLINE>
+    indent.
+    <BLANKLINE>
+    
+test 2: text with new line
+    >>> text_indentation("""\n""")
+    <BLANKLINE>
+
+test 3: text with characters and newline
+    >>> text_indentation("""hiworld!"-hi.:?""")
+    hiworld!"-hi.:?
+
+test 4: integer as text
+    >>> text_indentation(654)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+test 5: float as text
+    >>> text_indentation(6.54)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+test 6: Boolean as text
+    >>> text_indentation(True)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string

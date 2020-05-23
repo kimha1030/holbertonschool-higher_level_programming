@@ -1,0 +1,47 @@
+===============================
+ How to use 3-say_my_name.py
+===============================
+
+Import module:
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Function:
+Funtion that allows prints first name and last_name
+
+test 0: Type str of first name:
+    >>> say_my_name("Jhonny", "Gil")
+    Jhonny Gil
+
+test 1: Type of first name different of str
+    >>> say_my_name(Jhon, "Gil")
+    Traceback (most recent call last):
+    ...
+    NameError: name 'Jhon' is not defined
+
+test 2: Type of first name is integer
+    >>> say_my_name(234, "Gil")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+test 3: Type of first name is boolean
+    >>> say_my_name(True, "Gil")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name("Jhon", False)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
+test 4: first name empty:
+    >>> say_my_name("", "Gil")
+     Gil
+
+test 5: Type of first name is boolean
+    >>> say_my_name()
+    Traceback (most recent call last):
+    ...
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
