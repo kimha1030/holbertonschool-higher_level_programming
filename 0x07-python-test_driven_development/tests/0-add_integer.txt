@@ -67,11 +67,11 @@ test #10 sum integer a that have a whitespace with int b
     >>> add_integer( 23, 7)
     30
 
-test #11 sum string cast and integer
-    >>> add_integer(float("hello", 88)
+test #11 sum string and integer
+    >>> add_integer("hi", 88)
     Traceback (most recent call last):
     ...
-    ValueError: could not convert string to float: 'hello'
+    TypeError: a must be an integer
 
 test #12 sum value a as None
     >>> add_integer(None)
@@ -106,9 +106,3 @@ test #16 sum integer and boolean
 test #17 sum two floats
     >>> add_integer(9.5, 6.4)
     15
-
-test #18 sum string and integer
-    >>> add_integer("hi", 88)
-    Traceback (most recent call last):
-    ...
-    TypeError: a must be an integer
