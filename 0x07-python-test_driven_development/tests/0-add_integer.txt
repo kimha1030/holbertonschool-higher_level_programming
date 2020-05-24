@@ -106,3 +106,9 @@ test #16 sum integer and boolean
 test #17 sum two floats
     >>> add_integer(9.5, 6.4)
     15
+
+test #18 sum string and integer
+    >>> add_integer("hi", 88)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
