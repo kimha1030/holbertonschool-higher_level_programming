@@ -9,11 +9,11 @@ Import module:
 Function:
 Funtion that allows divides a matrix by a number
 
-test 0: matrix empty and without div
-    >>> matrix_divided()
+test 0: string as value of div in matrix
+    >>> matrix_divided([[1, 2, 3],[4, 5, 6],[7, 8, 9]], "Hola")
     Traceback (most recent call last):
     ...
-    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    TypeError: div must be a number
 
 test 1: rows with equal size
     >>> matrix_divided([[1,2,3],[4,5,6],[7,8,9]], 3)
@@ -25,72 +25,60 @@ test 2: rows with different size
     ...
     TypeError: Each row of the matrix must have the same size
 
-test 3: string in matrix
-    >>> matrix_divided([[1, 2, 3],[4, 5, 6],["hi", 8, 9]], 3)
-    Traceback (most recent call last):
-    ...
-    TypeError: matrix must be a matrix (list of lists) of integers/floats
-
-test 4: dictionary in matrix
+test 3: dictionary in matrix
     >>> matrix_divided([[1, 2, 3],[4, 5, 6],[{2, 3}, 8, 9]], 3)
     Traceback (most recent call last):
     ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-test 5: tuple in matrix
+test 4: tuple in matrix
     >>> matrix_divided([[1, 2, 3],[4, 5, 6],[(1, 2), 8, 9]], 3)
     Traceback (most recent call last):
     ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-test 6: float in matrix
+test 5: float in matrix
     >>> matrix_divided([[1.0, 2, 3],[4, 5, 6],[7, 8, 9]], 3)
     [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0], [2.33, 2.67, 3.0]]
 
-test 7: negative integer in matrix
+test 6: negative integer in matrix
     >>> matrix_divided([[1.0, 2, 3],[4, 5, 6],[7, 8, 9]], 3)
     [[0.33, 0.67, -1.0], [1.33, 1.67, 2.0], [2.33, 2.67, 3.0]]
 
-test 8: value zero in matrix
+test 7: value zero in matrix
     >>> matrix_divided([[1, 2, 0],[4, 5, 6],[7, 8, 9]], 3)
     [[0.33, 0.67, 0.0], [1.33, 1.67, 2.0], [2.33, 2.67, 3.0]]
 
-test 9: Divide matrix by zero value
+test 8: Divide matrix by zero value
     >>> matrix_divided([[1, 2, 3],[4, 5, 6],[7, 8, 9]], 0)
     Traceback (most recent call last):
     ...
     ZeroDivisionError: division by zero
 
-test 10: Boolean in matrix
+test 9: Boolean in matrix
     >>> matrix_divided([[1, 2, 3],[4, 5, 6],[True, 8, 9]], 3)
     Traceback (most recent call last):
     ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-test 11: one argument in list in matrix
+test 10: one argument in list in matrix
     >>> matrix_divided([1], 3)
     Traceback (most recent call last):
     ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-test 12: one list in matrix
+test 11: one list in matrix
     >>> matrix_divided([1, 2, 3], 3)
     Traceback (most recent call last):
     ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-test 13: value zero in matrix
+test 12: float as div in matrix
     >>> matrix_divided([[1, 2, 3],[4, 5, 6],[7, 8, 9]], 3.4)
     [[0.29, 0.59, 0.88], [1.18, 1.47, 1.76], [2.06, 2.35, 2.65]]
 
-test 14: value zero in matrix
+test 13: boolean as div in matrix
     >>> matrix_divided([[1, 2, 3],[4, 5, 6],[7, 8, 9]], True)
-    Traceback (most recent call last):
-    ...
-    TypeError: div must be a number
-
-test 15: value zero in matrix
-    >>> matrix_divided([[1, 2, 3],[4, 5, 6],[7, 8, 9]], "Hola")
     Traceback (most recent call last):
     ...
     TypeError: div must be a number
