@@ -30,6 +30,6 @@ def matrix_divided(matrix, div):
             raise TypeError(msg2)
         for c in row:
             if type(c) not in (float, int):
-                raise TypeError(msg1)
+                raise TypeError(msg2)
     x = [[round(c/div, 2) for c in row] for row in matrix]
     return (x)
