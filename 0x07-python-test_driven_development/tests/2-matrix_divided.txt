@@ -43,7 +43,7 @@ test 5: float in matrix
 
 test 6: negative integer in matrix
     >>> matrix_divided([[1.0, 2, 3],[4, 5, 6],[7, 8, 9]], 3)
-    [[0.33, 0.67, -1.0], [1.33, 1.67, 2.0], [2.33, 2.67, 3.0]]
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0], [2.33, 2.67, 3.0]]
 
 test 7: value zero in matrix
     >>> matrix_divided([[1, 2, 0],[4, 5, 6],[7, 8, 9]], 3)
