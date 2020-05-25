@@ -24,10 +24,9 @@ class Rectangle:
     def perimeter(self):
         """Return perimeter"""
         if self.__width == 0 or self.__height == 0:
-            perimeter = 0
+            return 0
         else:
-            perimeter = 2 * self.__width + 2 * self.__height
-        return perimeter
+            return (2 * self.__width + 2 * self.__height)
 
     @property
     def width(self):
@@ -59,8 +58,8 @@ class Rectangle:
 
     def __str__(self):
         """method print with __str__"""
-        if self.__width == 0 and self.__height == 0:
-            return ""
+        if self.__width == 0 or self.__height == 0:
+            return """"""
         else:
             for i in range(self.__height):
                 characters = "#" * self.__width
