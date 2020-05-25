@@ -54,7 +54,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return """"""
         else:
-            for i in range(self.__height):
+            for i in range(1, self.__height):
                 characters = "#" * self.__width
                 print(characters)
             return characters
