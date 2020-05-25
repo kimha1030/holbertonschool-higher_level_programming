@@ -57,4 +57,4 @@ class Rectangle:
             for i in range(self.__height):
                 characters = "#" * self.__width
                 print(characters)
-        return characters
+            return characters
