@@ -5,12 +5,23 @@
 class Rectangle:
     """Class rectangle that define a rectangle"""
     def __init__(self, width=0, height=0):
-        self.width = width
-        self.height = height
+        if type(width) is not int:
+            raise TypeError("width must be an integer")
+        if width < 0:
+            raise ValueError("width must be >= 0")
+        else:
+            self.width = width
+        if type(height) is not int:
+            raise TypeError("height must be an integer")
+        if height < 0:
+            raise ValueError("height must be >= 0")
+        else:
+            self.height = height
 
     def area(self):
         """Return area"""
-        return self.__width * self.__height
+        area = self.__width * self.__height
+        return area
 
     def perimeter(self):
         """Return perimeter"""
@@ -53,7 +64,7 @@ class Rectangle:
     def __str__(self):
         """method print with __str__"""
         if self.__width == 0 and self.__height == 0:
-            return """"""
+            return ""
         else:
             for i in range(self.__height):
                 characters = "#" * self.__width
