@@ -1,0 +1,90 @@
+==============================
+ How to use 100-matrix_mul.py
+==============================
+
+Import module:
+
+    >>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+Function:
+Funtion that allows multiply two matrix
+
+test 0: number rows m_a is equal to number columns m_b
+    >>> matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, 8]])
+    [[19, 22], [43, 50]]
+    >>> matrix_mul([[1, 2], [3, 4], [3, 4]], [[5, 6, 1], [7, 8, 2]])
+    [[19, 22, 5], [43, 50, 11], [43, 50, 11]]
+
+test 1: one row m_a by two columns in m_b
+    >>> matrix_mul([[1, 2]], [[5, 6], [7, 8]])
+    [[19, 22]]
+
+test 2: two rows m_a by one column in m_b
+    >>> matrix_mul([[1, 2], [5, 6]], [[7, 8]])
+    Traceback (most recent call last):
+    ...
+    ValueError: m_a and m_b can't be multiplied
+    >>> matrix_mul([[1, 2, 3], [3, 4, 5]], [[1, 2], [1, 2]])
+    Traceback (most recent call last):
+    ...
+    ValueError: m_a and m_b can't be multiplied
+
+test 3: type of m_a is string and m_b is type list of lists
+    >>> matrix_mul("Holberton", [[1, 2], [3, 4]])
+    Traceback (most recent call last):
+    ...
+    TypeError: m_a must be a list
+
+test 4: type of m_a is list of lists and m_b is type string
+    >>> matrix_mul([[1, 2], [3, 4]], "Holberton")
+    Traceback (most recent call last):
+    ...
+    TypeError: m_b must be a list
+
+test 5: type of m_a is list and m_b is list of lists
+    >>> matrix_mul([1, 2, 3, 4], [[1, 2], [3, 4]])
+    Traceback (most recent call last):
+    ...
+    TypeError: m_a must be a list of lists
+
+test 6: type of m_a is list of lists and m_b es type list
+    >>> matrix_mul([[1, 2], [3, 4]], [1, 2, 3, 4])
+    Traceback (most recent call last):
+    ...
+    TypeError: m_b must be a list of lists
+
+test 7: m_a is list of lists empty and m_b is list of lists
+    >>> matrix_mul([[]], [[1, 2], [3, 4]])
+    Traceback (most recent call last):
+    ...
+    TypeError: m_a can't be empty
+
+test 8: m_a is list of lists and m_b is list of lists empty
+    >>> matrix_mul([[1, 2], [3, 4]], [[]])
+    Traceback (most recent call last):
+    ...
+    TypeError: m_b can't be empty
+
+test 9: m_a contains an boolean and m_b is list of lists
+    >>> matrix_mul([[True, 2], [3, 4]], [[1, 2], [1, 2]])
+    Traceback (most recent call last):
+    ...
+    TypeError: m_a should contain only integers or floats
+
+test 10: m_a is list of lists and m_b contains string
+    >>> matrix_mul([[1, 2], [3, 4]], [[1, 2], ["1", 2]])
+    Traceback (most recent call last):
+    ...
+    TypeError: m_b should contain only integers or floats
+
+test 11: Different size of rows in m_a
+    >>> matrix_mul([[1, 2, 3], [3, 4]], [[1, 2], [1, 2]])
+    Traceback (most recent call last):
+    ...
+    TypeError: each row of m_a must be of the same size
+
+test 12: Different size of rows in m_a
+    >>> matrix_mul([[1, 2], [3, 4]], [[1, 2, 3], [1, 2]])
+    Traceback (most recent call last):
+    ...
+    TypeError: each row of m_b must be of the same size
