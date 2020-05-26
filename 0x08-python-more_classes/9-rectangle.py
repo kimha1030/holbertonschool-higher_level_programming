@@ -29,7 +29,7 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """Class method for return a new Rectangle instance""" 
+        """Class method for return a new Rectangle instance"""
         return Rectangle(size, size)
 
     def bigger_or_equal(rect_1, rect_2):
