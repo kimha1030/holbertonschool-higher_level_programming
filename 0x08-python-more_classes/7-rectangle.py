@@ -57,15 +57,16 @@ class Rectangle:
 
     def __str__(self):
         """method print with __str__"""
-        res = ""
+        line = ""
         if self.__width == 0 or self.__height == 0:
-            return res
+            return line
         else:
             for row in range(self.__height):
+                line = line + "\n"
                 for col in range(self.__width):
-                    res = res + str(self.print_symbol)
-                res = res + "\n"
-            return res
+                    line = line + str(self.print_symbol)
+            rectangles = line[1:]
+            return rectangles
 
     def __repr__(self):
         """method print with __repr__"""
