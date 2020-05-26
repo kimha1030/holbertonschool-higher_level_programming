@@ -61,10 +61,10 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return res
         else:
-            for row in range(1, self.__height):
+            for row in range(self.__height):
+                for col in range(self.__width):
+                    res = res + str(self.print_symbol)
                 res = res + "\n"
-                for col in range(1, self.__width):
-                    res = res + Rectangle.print_symbol
             return res
 
     def __repr__(self):
