@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-"""Module to find the product o f two matrix
+"""Module numpy
 """
 import numpy
+
 
 def lazy_matrix_mul(m_a, m_b):
     """Function to find the product of two matrix
