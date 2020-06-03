@@ -7,8 +7,8 @@ class Square(Rectangle):
     """ Method check size of square """
     def __init__(self, size):
         """Method constructor"""
-        super().__init__(size, size)
         super().integer_validator("size", size)
+        super().__init__(size, size)
         self.__size = size
 
     def area(self):
