@@ -78,7 +78,7 @@ test 9: Without one argument
 
 test 10: Without two arguments
     >>> bg = BaseGeometry()
-    >>> bg.integer_validator(89)
+    >>> bg.integer_validator()
     Traceback (most recent call last):
     ...
     TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
@@ -88,3 +88,14 @@ test 11: Value of area
     Traceback (most recent call last):
     ...
     Exception: area() is not implemented
+
+test 12: Negative float as value
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("int", -2.3)
+    Traceback (most recent call last):
+    ...
+    TypeError: int must be an integer
+
+test 13: empty string as name
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("", 23)
