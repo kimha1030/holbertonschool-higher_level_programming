@@ -57,7 +57,7 @@ test 4: Append a cast float to int
     []
 
 test 5: Append a negative value
-    >>> my_list2 = MyList()
+    >>> my_list = MyList()
     >>> my_list.append(2)
     >>> my_list.append(3)
     >>> my_list.append(-8)
