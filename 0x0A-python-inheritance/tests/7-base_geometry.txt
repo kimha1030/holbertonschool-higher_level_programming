@@ -81,7 +81,7 @@ test 10: Without two arguments
     >>> bg.integer_validator(89)
     Traceback (most recent call last):
     ...
-    ypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 test 11: Value of area
     >>> bg.area()
