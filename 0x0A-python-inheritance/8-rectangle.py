@@ -5,18 +5,21 @@
 class BaseGeometry:
     """Method check value of name, age, distance"""
     def area(self):
+        """This function is not implemented"""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
+        """Method integer_vevlidator"""
         if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
-        if value < 0:
+        if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
 
 
 class Rectangle(BaseGeometry):
     """ Method check width and height of Class Rectangle """
     def __init__(self, width, height):
+        """Constructor"""
         BaseGeometry.__init__(self)
         self.integer_validator("width", width)
         self.integer_validator("height", height)
