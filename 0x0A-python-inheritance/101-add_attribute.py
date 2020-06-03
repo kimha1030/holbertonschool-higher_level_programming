@@ -5,6 +5,6 @@
 def add_attribute(self, name, value):
     """Function: compares values of a class"""
     try:
-        self.name == value
+        self.name = value
     except:
         raise TypeError("can't add new attribute")
