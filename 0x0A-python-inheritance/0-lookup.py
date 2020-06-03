@@ -4,6 +4,4 @@
 
 def lookup(obj):
     """Function that return the available attributes"""
-    list_o = []
-    list_o = getattr(obj)
-    return list_o
+    return dir(obj)
