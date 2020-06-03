@@ -20,7 +20,6 @@ class Rectangle(BaseGeometry):
     """ Method check width and height of Class Rectangle """
     def __init__(self, width, height):
         """Constructor"""
-        BaseGeometry.__init__(self)
         self.integer_validator("width", width)
         self.integer_validator("height", height)
         self.__width = width
