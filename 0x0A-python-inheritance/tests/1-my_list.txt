@@ -23,30 +23,12 @@ test 1: list as object and append one integer
     >>> my_list.print_sorted()
     [-7, 1, 4, 4, 5]
 
-test 2: append a infinite number
-    >>> my_list = MyList()
-    >>> my_list.append(2)
-    >>> my_list.append(3)
-    >>> my_list.append(5345345456456456456e3)
-    >>> my_list.append(1)
-    >>> my_list.print_sorted()
-    [1, 2, 3, 5.345345456456456e+21]
-
-test 3: Append a cast float to int 
-    >>> my_list = MyList()
-    >>> my_list.append(2)
-    >>> my_list.append(3)
-    >>> my_list.append(int(4.2))
-    >>> my_list.append(1)
-    >>> my_list.print_sorted()
-    [1, 2, 3, 4]
-
-test 4: Copy empty list
+test 2: Copy empty list
     >>> copy_mylist = MyList()
     >>> print(copy_mylist)
     []
 
-test 5: Append a negative integer 
+test 3: Append a negative integer 
     >>> my_list = MyList()
     >>> my_list.append(2)
     >>> my_list.append(3)
