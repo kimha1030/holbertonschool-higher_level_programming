@@ -19,33 +19,14 @@ test 0: Correct output
     >>> my_list.print_sorted()
     [2, 5, 6]
 
-test 1: list as object and append one integer
-    >>> my_list = MyList([4, -7, 4, 1])
-    >>> my_list.append(5)
-    >>> print(my_list)
-    [4, -7, 4, 1, 5]
-    >>> my_list.print_sorted()
-    [-7, 1, 4, 4, 5]
-
-test 2: append a infinite number
-    >>> my_list = MyList()
-    >>> my_list.append(2)
-    >>> my_list.append(3)
-    >>> my_list.append(5345345456456456456e3)
-    >>> my_list.append(1)
-    >>> print(my_list)
-    [2, 3, 5.345345456456456e+21, 1]
-    >>> my_list.print_sorted()
-    [1, 2, 3, 5.345345456456456e+21]
-
-test 3: Append a cast float to int 
+test 1: Print empty list
     >>> my_list2 = MyList()
     >>> print(my_list2)
     []
     >>> my_list2.print_sorted()
     []
 
-test 4: Append a negative value
+test 2: Append a negative value
     >>> my_list = MyList()
     >>> my_list.append(2)
     >>> my_list.append(3)
