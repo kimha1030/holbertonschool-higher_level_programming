@@ -28,7 +28,9 @@ test 2: text with new line
 
 test 3: text with characters and newline
     >>> text_indentation("""hiworld!"-hi.:?""")
-    hiworld!"-hi.:?
+    hiworld!"-hi.
+    :
+    ?
 
 test 4: integer as text
     >>> text_indentation(654)
@@ -47,3 +49,8 @@ test 6: Boolean as text
     Traceback (most recent call last):
     ...
     TypeError: text must be a string
+
+test 7: string as text
+    >>> text_indentation("""hi.world""")
+    hi.
+    world
