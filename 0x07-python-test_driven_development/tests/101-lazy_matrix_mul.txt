@@ -86,8 +86,14 @@ test 11: Different size of rows in m_a
     ...
     TypeError: each row of m_a must be of the same size
 
-test 12: Different size of rows in m_a
+test 12: Different size of rows in m_b
     >>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2, 3], [1, 2]])
     Traceback (most recent call last):
     ...
     TypeError: each row of m_b must be of the same size
+
+test 12: Different size of rows in m_b
+    >>> lazy_matrix_mul([[1, 2]])
+    Traceback (most recent call last):
+    ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
