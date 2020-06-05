@@ -11,7 +11,7 @@ Funtion that allows prints first name and last_name
 
 test 0: Type str of first name:
     >>> say_my_name("Jhonny", "Gil")
-    my name is Jhonny Gil
+    My name is Jhonny Gil
 
 test 1: Type of first name different of str
     >>> say_my_name(Jhon, "Gil")
@@ -38,7 +38,7 @@ test 3: Type of first name is boolean
 
 test 4: first name empty:
     >>> say_my_name("", "Gil")
-    my name is Gil
+    My name is  Gil
 
 test 5: Type of first name is boolean
     >>> say_my_name()
