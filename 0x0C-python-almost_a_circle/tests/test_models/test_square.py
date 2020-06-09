@@ -2,7 +2,7 @@
 """Unittest for Square
 """
 import unittest
-from models.Square import Square
+from models.square import Square
 
 
 class TestSquare(unittest.TestCase):
@@ -86,7 +86,7 @@ class TestSquare(unittest.TestCase):
     def test_update_menor(self):
         squ_12 = Square(4, 8)
         squ_12.update(12, 34, 2, 1)
-        self.assertEqual(squ_12.__str__(), "(Square) (12) 1/0 - 34/2")
+        self.assertEqual(squ_12.__str__(), "(Square) (12) 2/1 - 34")
 
     def test_update_mayor(self):
         squ_13 = Square(4, 8, 3, 1)
@@ -111,4 +111,4 @@ class TestSquare(unittest.TestCase):
     # Dejar de ultimo por el id
     def test_without_id(self):
         squ_5 = Square(10, 2)
-        self.assertEqual(squ_5.id, 3)
+        self.assertEqual(squ_5.id, 21)
