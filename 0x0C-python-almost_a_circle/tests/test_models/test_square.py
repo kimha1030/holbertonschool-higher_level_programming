@@ -106,4 +106,4 @@ class TestSquare(unittest.TestCase):
 
     def test_without_id(self):
         squ_5 = Square(10, 2)
-        self.assertEqual(squ_5.id, 6)
+        self.assertEqual(squ_5.id, 21)
