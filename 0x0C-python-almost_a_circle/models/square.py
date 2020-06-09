@@ -7,31 +7,24 @@ class Square(Rectangle):
     """Method check width, height, x and y of Class Rectangle"""
     def __init__(self, size, x=0, y=0, id=None):
         """Method constructor"""
-        self.size = size
         super().__init__(size, size, x, y, id)
-        self.__x = self.x
-        self.__y = self.y
 
     def __str__(self):
         """method print with __str__"""
         message_str = "(Square) ({}) {}/{} - {}".format(
-            self.id, self.__x, self.__y, self.__size)
+            self.id, self.x, self.y, self.size)
         return message_str
 
     @property
     def size(self):
         """Return protected width"""
-        return self.__size
+        return self.width
 
     @size.setter
     def size(self, value):
         """Modifiy size as value"""
-        if type(value) != int:
-            raise TypeError("width must be an integer")
-        if value <= 0:
-            raise ValueError("width must be > 0")
-        else:
-            self.__size = value
+        self.width = value
+        self.height = value
 
     def update(self, *args, **kwargs):
         """Method update"""
