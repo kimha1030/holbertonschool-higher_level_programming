@@ -139,4 +139,4 @@ class TestRectangle(unittest.TestCase):
     # Dejar de ultimo por el id
     def test_without_id(self):
         rect_13 = Rectangle(10, 2)
-        self.assertEqual(rect_13.id, 12)
+        self.assertEqual(rect_13.id, 14)
