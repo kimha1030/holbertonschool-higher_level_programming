@@ -18,9 +18,11 @@ class Base:
 
     def to_json_string(list_dictionaries):
         """Function: convert to obj json from str"""
-        if list_dictionaries is None or list_dictionaries is "":
-            return "[]"
-        return json.dumps(list_dictionaries)
+        if not list_dictionaries and list_dictionaries is None:
+            new_list = "[]"
+        else:
+            new_list = json.dumps(list_dictionaries)
+        return new_list
 
     @classmethod
     def save_to_file(cls, list_objs):
