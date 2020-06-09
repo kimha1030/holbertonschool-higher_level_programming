@@ -4,6 +4,8 @@
 import unittest
 import pep8
 from models.square import Square
+from io import StringIO
+from unittest.mock import patch
 
 
 class TestSquare(unittest.TestCase):
@@ -87,7 +89,7 @@ class TestSquare(unittest.TestCase):
     def test_str(self):
         """Test str"""
         squ_9 = Square(4)
-        self.assertEqual(squ_9.__str__(), "[Square] (15) 0/0 - 4")
+        self.assertEqual(squ_9.__str__(), "[Square] (2) 0/0 - 4")
 
     def test_x_dict(self):
         """Test x dict"""
@@ -112,3 +114,17 @@ class TestSquare(unittest.TestCase):
         with self.assertRaises(ValueError):
             squ_16 = Square(5, 6)
             squ_16.update(2, 1, -3, 4)
+
+    def test_square(self):
+        """Test square"""
+        with self.assertRaises(ValueError) as test1:
+            squ17 = Square(10, 2, -3, 5)
+        self.assertTrue("y must be >= 0" in str(test1.exception))
+
+    def test_display(self):
+        """Test display"""
+        r = Square(2, 2, 3)
+        display_example = "\n\n\n  ##\n  ##\n"
+        with patch('sys.stdout', new=StringIO()) as fakeOutput:
+            r.display()
+        self.assertEqual(fakeOutput.getvalue(), display_example)

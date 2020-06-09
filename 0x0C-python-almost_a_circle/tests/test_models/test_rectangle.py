@@ -4,6 +4,8 @@
 import unittest
 import pep8
 from models.rectangle import Rectangle
+from io import StringIO
+from unittest.mock import patch
 
 
 class TestRectangle(unittest.TestCase):
@@ -122,7 +124,7 @@ class TestRectangle(unittest.TestCase):
     def test_str(self):
         """test str"""
         rect_9 = Rectangle(4, 8)
-        self.assertEqual(rect_9.__str__(), "[Rectangle] (9) 0/0 - 4/8")
+        self.assertEqual(rect_9.__str__(), "[Rectangle] (8) 0/0 - 4/8")
 
     def test_x_dict(self):
         """test x dict"""
@@ -153,3 +155,17 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             rect_16 = Rectangle(5, 6)
             rect_16.update(2, 1, -3, 4)
+
+    def test_rect(self):
+        """Test Rectangle"""
+        with self.assertRaises(ValueError) as test1:
+            rect17 = Rectangle(10, 2, -3, 5, 19)
+        self.assertTrue("x must be >= 0" in str(test1.exception))
+
+    def test_display(self):
+        """Test display"""
+        r = Rectangle(3, 2)
+        display_example = "###\n###\n"
+        with patch('sys.stdout', new=StringIO()) as fakeOutput:
+            r.display()
+        self.assertEqual(fakeOutput.getvalue(), display_example)
