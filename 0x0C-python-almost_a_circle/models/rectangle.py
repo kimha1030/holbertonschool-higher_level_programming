@@ -80,19 +80,14 @@ class Rectangle(Base):
 
     def display(self):
         """method print the rectangle"""
-        if self.__x is None and self.__y is None:
-            for i in range(1, self.__height):
-                characters = "#" * self.__width
-                print(characters)
-        else:
-            for es_up in range(self.__y):
-                print("")
-            for he_r in range(self.__height):
-                for es_dw in range(self.__y):
-                    print(" ", end="")
-                for wi_r in range(self.__width):
-                    print("#", end="")
-                print("")
+        for sp_up in range(self.__y):
+            print("")
+        for he_r in range(self.__height):
+            for sp_dw in range(self.__x):
+                print(" ", end="")
+            for wi_r in range(self.__width):
+                print("#", end="")
+            print("")
 
     def __str__(self):
         """method print with __str__"""
