@@ -11,7 +11,7 @@ class Square(Rectangle):
 
     def __str__(self):
         """method print with __str__"""
-        message_str = "(Square) ({}) {}/{} - {}".format(
+        message_str = "[Square] ({}) {}/{} - {}".format(
             self.id, self.x, self.y, self.size)
         return message_str
 
