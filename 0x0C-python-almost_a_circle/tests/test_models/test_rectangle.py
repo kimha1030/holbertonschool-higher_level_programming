@@ -122,7 +122,7 @@ class TestRectangle(unittest.TestCase):
     def test_str(self):
         """test str"""
         rect_9 = Rectangle(4, 8)
-        self.assertEqual(rect_9.__str__(), "[Rectangle] (7) 0/0 - 4/8")
+        self.assertEqual(rect_9.__str__(), "[Rectangle] (9) 0/0 - 4/8")
 
     def test_x_dict(self):
         """test x dict"""

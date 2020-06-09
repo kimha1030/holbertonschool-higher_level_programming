@@ -87,7 +87,7 @@ class TestSquare(unittest.TestCase):
     def test_str(self):
         """Test str"""
         squ_9 = Square(4)
-        self.assertEqual(squ_9.__str__(), "[Square] (1) 0/0 - 4")
+        self.assertEqual(squ_9.__str__(), "[Square] (15) 0/0 - 4")
 
     def test_x_dict(self):
         """Test x dict"""
