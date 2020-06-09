@@ -18,8 +18,9 @@ class Base:
 
     def to_json_string(list_dictionaries):
         """Function: convert to obj json from str"""
+        new_list = []
         if list_dictionaries is None or len(list_dictionaries) == 0:
-            return "[]"
+            return new_list
         else:
             return (json.dumps(list_dictionaries))
 
