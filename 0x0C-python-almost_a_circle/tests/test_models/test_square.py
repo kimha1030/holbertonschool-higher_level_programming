@@ -94,7 +94,7 @@ class TestSquare(unittest.TestCase):
     def test_update_menor(self):
         squ_12 = Square(4, 8)
         squ_12.update(12, 34, 2, 1)
-        self.assertEqual(squ_12.__str__(), "(Square) (12) 8/0 - 4")
+        self.assertEqual(squ_12.__str__(), "[Square] (12) 1/0 - 34")
 
     def test_update_height(self):
         with self.assertRaises(ValueError):
@@ -110,7 +110,3 @@ class TestSquare(unittest.TestCase):
         squ_14 = Square(3, 1)
         squ_14.update(12, 34, 37, 27)
         self.assertEqual(print(squ_14.width), None)
-
-    def test_without_id(self):
-        squ_5 = Square(10, 2)
-        self.assertEqual(squ_5.id, 21)
