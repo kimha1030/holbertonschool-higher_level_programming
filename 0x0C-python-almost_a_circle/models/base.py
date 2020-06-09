@@ -28,10 +28,11 @@ class Base:
     def save_to_file(cls, list_objs):
         """Method for save obj json as file"""
         files = cls.__name__+".json"
-        if list_objs is None and len(list_objs) == 0:
+        if list_objs is None:
             new_list = []
             with open(files, "w", encoding="UTF-8") as new_file:
-                new_file.write(new_list)
+                data = cls.to_json_string(new_list)
+                new_file.write(data)
         else:
             with open(files, "w", encoding="UTF-8") as new_file:
                 new_list = []
