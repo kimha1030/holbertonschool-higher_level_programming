@@ -7,8 +7,8 @@ class Square(Rectangle):
     """Method check width, height, x and y of Class Rectangle"""
     def __init__(self, size, x=0, y=0, id=None):
         """Method constructor"""
-        super().__init__(size, size, x, y, id)
         self.size = size
+        super().__init__(size, size, x, y, id)
         self.__x = self.x
         self.__y = self.y
 
