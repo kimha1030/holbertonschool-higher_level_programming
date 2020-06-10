@@ -76,20 +76,20 @@ class TestSquare(unittest.TestCase):
         with self.assertRaises(TypeError):
             Square(5, -3.8)
 
-    def test_str(self):
+    def test_str1(self):
         """Test str"""
         squ_8 = Square(4, 6, 2)
-        self.assertEqual(print(squ_8), "(Square) (12) 2/1 - 4/6")
+        self.assertEqual(squ_8.__str__(), "[Square] (18) 6/2 - 4")
 
-    def test_str(self):
+    def test_str2(self):
         """Test str"""
         squ_9 = Square(4, 8)
-        self.assertEqual(squ_9.__str__(), "(Square) (10) 6/0 - 4/8")
+        self.assertEqual(squ_9.__str__(), "[Square] (19) 8/0 - 4")
 
-    def test_str(self):
+    def test_str3(self):
         """Test str"""
         squ_9 = Square(4)
-        self.assertEqual(squ_9.__str__(), "[Square] (2) 0/0 - 4")
+        self.assertEqual(squ_9.__str__(), "[Square] (20) 0/0 - 4")
 
     def test_x_dict(self):
         """Test x dict"""
@@ -107,9 +107,9 @@ class TestSquare(unittest.TestCase):
         """Test update"""
         with self.assertRaises(ValueError):
             squ_13 = Square(1, 5)
-            squ_13.update(0, 2, 3, 4)
+            squ_13.update(2, -2, 3, 4)
 
-    def test_update_height(self):
+    def test_update_x(self):
         """Test update"""
         with self.assertRaises(ValueError):
             squ_16 = Square(5, 6)
@@ -118,7 +118,7 @@ class TestSquare(unittest.TestCase):
     def test_square(self):
         """Test square"""
         with self.assertRaises(ValueError) as test1:
-            squ17 = Square(10, 2, -3, 5)
+            Square(10, 2, -3, 5)
         self.assertTrue("y must be >= 0" in str(test1.exception))
 
     def test_display(self):

@@ -111,22 +111,22 @@ class TestRectangle(unittest.TestCase):
         rect_6 = Rectangle(3, 5, 6, 7)
         self.assertEqual(rect_6.area(), 15)
 
-    def test_str(self):
+    def test_str1(self):
         """test str"""
         rect_8 = Rectangle(4, 6, 2, 1, 12)
-        self.assertEqual(print(rect_8), "[Rectangle] (12) 2/1 - 4/6")
+        self.assertEqual(rect_8.__str__(), "[Rectangle] (12) 2/1 - 4/6")
 
-    def test_str(self):
+    def test_str2(self):
         """test str"""
         rect_9 = Rectangle(4, 8, 6)
         self.assertEqual(rect_9.__str__(), "[Rectangle] (10) 6/0 - 4/8")
 
-    def test_str(self):
+    def test_str3(self):
         """test str"""
         rect_9 = Rectangle(4, 8)
-        self.assertEqual(rect_9.__str__(), "[Rectangle] (8) 0/0 - 4/8")
+        self.assertEqual(rect_9.__str__(), "[Rectangle] (11) 0/0 - 4/8")
 
-    def test_x_dict(self):
+    def test_x_dict1(self):
         """test x dict"""
         with self.assertRaises(ValueError):
             rect_11 = Rectangle(20, 30, 40, 50)
@@ -159,7 +159,7 @@ class TestRectangle(unittest.TestCase):
     def test_rect(self):
         """Test Rectangle"""
         with self.assertRaises(ValueError) as test1:
-            rect17 = Rectangle(10, 2, -3, 5, 19)
+            Rectangle(10, 2, -3, 5, 19)
         self.assertTrue("x must be >= 0" in str(test1.exception))
 
     def test_display(self):
