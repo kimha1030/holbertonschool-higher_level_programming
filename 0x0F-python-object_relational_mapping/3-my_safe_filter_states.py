@@ -16,9 +16,8 @@ def filter_states_safe():
         db=sys.argv[3],
         charset="utf8")
     cur = con.cursor()
-    sql = """SELECT * FROM states WHERE BINARY name = '{:s}'\
-             ORDER BY states.id ASC""".format(sys.argv[4])
-    cur.execute(sql)
+    cur.execute("SELECT * FROM states WHERE name = %s\
+                 ORDER BY states.id ASC", [sys.argv[4]])
     rows = cur.fetchall()
     for row in rows:
         print(row)
