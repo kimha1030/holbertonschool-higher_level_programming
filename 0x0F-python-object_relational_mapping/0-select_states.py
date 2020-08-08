@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 # Lists all states from DB hbtn_0e_0_usa
-import MySQLdb as mdb
+import MySQLdb
 import sys
 
 
 if __name__ == '__main__':
-    con = mdb.connect(
+    con = MySQLdb.connect(
+        host="localhost",
         user=sys.argv[1],
         port=3306,
         passwd=sys.argv[2],
