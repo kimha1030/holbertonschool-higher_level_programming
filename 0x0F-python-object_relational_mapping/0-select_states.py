@@ -4,8 +4,7 @@ import MySQLdb as mdb
 import sys
 
 
-def select_states():
-    """Function select_states"""
+if __name__ == '__main__':
     mdb.connect(
         user=sys.argv[1],
         port=3306,
@@ -20,7 +19,3 @@ def select_states():
         print(row)
     cur.close()
     con.close()
-
-
-if __name__ == '__main__':
-    select_states()
