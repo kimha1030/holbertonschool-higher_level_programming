@@ -16,7 +16,7 @@ def filter_states_input():
         db=sys.argv[3],
         charset="utf8")
     cur = con.cursor()
-    sql = """SELECT * FROM states WHERE name = '{:s}'\
+    sql = """SELECT * FROM states WHERE name LIKE BINARY '{:s}'\
              ORDER BY states.id ASC""".format(sys.argv[4])
     cur.execute(sql)
     rows = cur.fetchall()
