@@ -6,7 +6,7 @@ import MySQLdb
 import sys
 
 
-if __name__ == '__main__':
+def select_states():
     con = MySQLdb.connect(
         host="localhost",
         user=sys.argv[1],
@@ -21,3 +21,6 @@ if __name__ == '__main__':
         print(row)
     cur.close()
     con.close()
+
+if __name__ == '__main__':
+    select_states()
