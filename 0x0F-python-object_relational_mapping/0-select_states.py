@@ -5,7 +5,7 @@ import sys
 
 
 if __name__ == '__main__':
-    mdb.connect(
+    con = mdb.connect(
         user=sys.argv[1],
         port=3306,
         passwd=sys.argv[2],
