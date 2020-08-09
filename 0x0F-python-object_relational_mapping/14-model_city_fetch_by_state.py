@@ -20,10 +20,13 @@ def list_state_city():
     Session = sessionmaker()
     Session.configure(bind=engine)
     session = Session()
-    query = session.query(State, City).join(City).order_by(City.id)
+    query = session.query(
+        State,
+        City).filter(
+        State.id == City.state_id).order_by(
+        City.id)
     for row in query:
-        print("{:}: {(:)} {:}".format(row[0].name, row[1].id, row[1].name))
-    session.commit()
+        print("{}: ({}) {}".format(row[0].name, row[1].id, row[1].name))
     session.close()
 
 if __name__ == "__main__":
