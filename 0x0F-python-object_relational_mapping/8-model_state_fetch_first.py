@@ -23,7 +23,7 @@ def first_state():
         query = session.query(State).order_by(State.id).first()
         print("{}: {}".format(query.id, query.name))
     except:
-        print("Nothing\n")
+        print("Nothing")
     session.close()
 
 if __name__ == "__main__":
