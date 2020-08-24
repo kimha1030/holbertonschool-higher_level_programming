@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Task 2: POST an email #0
+"""Task 2: POST an email #0"""
 from urllib import request
 from urllib import parse
 from sys import argv

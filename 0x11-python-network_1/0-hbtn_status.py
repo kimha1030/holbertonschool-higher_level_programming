@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Task 0: What's my status? #0
+"""Task 0: What's my status? #0"""
 from urllib import request
 with request.urlopen('https://intranet.hbtn.io/status') as response:
     html = response.read()
