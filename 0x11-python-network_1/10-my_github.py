@@ -10,8 +10,12 @@ def my_github():
     username = argv[1]
     password = argv[2]
     url = 'https://api.github.com/users/' + username
-    response = requests.get(url, ",", auth=HTTPBasicAuth(username, password))
-    print(response.json().get('id'))
+    try:
+        response = requests.get(
+            url, ",", auth=HTTPBasicAuth(username, password))
+        print(response.json().get('id'))
+    except:
+        print("None")
 
 
 if __name__ == "__main__":
