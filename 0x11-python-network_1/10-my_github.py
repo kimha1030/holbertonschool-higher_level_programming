@@ -15,7 +15,7 @@ def my_github():
     response_to_json = response.json()
     id_user = response_to_json.get('id')
     if id_user != "None":
-        print(response_to_json.get('id'))
+        print(id_user)
     else:
         print("None")
 
