@@ -8,9 +8,8 @@ def my_github():
     """Takes a url, sendsrequest and display body"""
     username = argv[1]
     password = argv[2]
-    url = 'https://api.github.com/users/' + username
-    response = requests.get(
-        url, ",", auth=(username, password))
+    url = 'https://api.github.com/user'
+    response = requests.get(url, auth=(username, password))
     response_to_json = response.json()
     id_user = response_to_json.get('id')
     if id_user != "None":
