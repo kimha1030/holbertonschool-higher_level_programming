@@ -10,11 +10,13 @@ def my_github():
     username = argv[1]
     password = argv[2]
     url = 'https://api.github.com/users/' + username
-    try:
-        response = requests.get(
-            url, ",", auth=HTTPBasicAuth(username, password))
-        print(response.json().get('id'))
-    except:
+    response = requests.get(
+        url, ",", auth=HTTPBasicAuth(username, password))
+    response_to_json = response.json()
+    id_user = response_to_json.get('id')
+    if id_user != "None":
+        print(response_to_json.get('id'))
+    else:
         print("None")
 
 
