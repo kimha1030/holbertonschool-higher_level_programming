@@ -13,8 +13,8 @@ def my_github():
     response = requests.get(url)
     response_data = response.json()
     for i in range(len(response_data)):
-        print(response_data[i]['sha'], response_data[i]
-              ['commit']['author']['name'])
+        print("{:}: {:}". format(response_data[i]['sha'], response_data[i]
+                                 ['commit']['author']['name']))
 
 
 if __name__ == "__main__":
