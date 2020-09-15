@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// This function allow print a const variable
+// Task 1. 3 languages
 console.log('C is fun');
 console.log('Python is cool');
 console.log('Javascript is amazing');

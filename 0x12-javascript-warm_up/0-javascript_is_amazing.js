@@ -1,4 +1,4 @@
 #!/usr/bin/node
-// This function allow print a const variable
+// Task 0. First constant, first print
 const myVar = 'Javascript is amazing';
 console.log(myVar);
