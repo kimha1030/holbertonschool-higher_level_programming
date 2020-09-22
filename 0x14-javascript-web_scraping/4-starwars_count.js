@@ -10,7 +10,7 @@ request(urlMovie[0], function (err, response, body) {
   let count = 0;
   for (const i in results) {
     for (const j in results[i].characters) {
-      if (results[i].characters[j] === 'https://swapi-api.hbtn.io/api/people/18/') { count = count + 1; }
+      if (results[i].characters[j].includes('18')) { count = count + 1; }
     }
   }
   console.log(count);
